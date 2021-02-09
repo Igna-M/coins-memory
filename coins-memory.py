@@ -49,8 +49,8 @@ def oneSimulation(numbTosses):
 
     each_result.append(percentage)
 
-    print('Percentage of coins with memory:', percentage)
-    print('')
+    # print('Percentage of coins with memory:', percentage)
+    # print('')
     ## print('Row ok:', row_ok)
     ## print('Memory:', has_memory)
     ## print('Has memory', percentage, '%')
@@ -65,32 +65,33 @@ objective = 10
 # Store Results
 each_result = []
 
+print("")
+print("Hay gente que cree que los dados tienen memoria; creen que si un dado sale CARA 10 veces, la siguiente vez saldrá CARA.")
+print("Gracias a este programa... ¡¡¡la humanidad sabrá la verdad!!!")
+print("(Aclaración, vamos a contar todas las repeticiones que se den 10 veces, sin importar si se esté repitiendo CARA o SECA)")
+print("Probemos...")
 
-wantedTosses = 100000
-wantedSimulations = 200
+print("")
+
+
+
+wantedTosses = int(input("¿Cuántás veces vas a tirar los dados en cada simulación? "))
+wantedSimulations = int(input("Cuántas simulaciones querés correr? "))
+
+# wantedTosses = 100000
+# wantedSimulations = 200
 
 sim_numb = 0
 for i in range(wantedSimulations):
     sim_numb += 1
-    print('# Simulation:', sim_numb)
     oneSimulation(wantedTosses)
 
 print('')
-print('Do the coins have memory?')
+print('Do coins have memory?')
 print("Let's see the results of this study")
 print('Amount of simulations:', wantedSimulations, 'Amount of tosses in each simulation:', wantedTosses)
-print('Amount of simulations:', sim_numb)
+print('Checking amount of simulations:', sim_numb)
 print('List of results:', each_result)
 print('Average of coins with memory:', statistics.mean(each_result))
 print('Total Tosses:', wantedTosses * wantedSimulations)
 print('Amount of succesful cases:', len(each_result))
-
-
-
-
-
-
-
-
-
-
